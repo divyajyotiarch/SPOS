@@ -1,0 +1,19 @@
+	START	100
+A	DS	3							
+L1	MOVER	AREG,	B				
+	ADD	AREG,	C					
+	SUB CREG,	='1'
+	SUB	BREG,	='6'				
+	MOVEM	AREG,	D
+	BC	ANY,	L2				
+	LTORG							
+D	EQU	A	+1						
+L2	PRINT	D						
+	MULT BREG, ='5'				
+	ORIGIN	A	-1	
+	MULT AREG,	='8'				
+C	DC	'5'							
+	ORIGIN	L2	+1				
+	STOP							
+B	DC	'19'						
+	END								

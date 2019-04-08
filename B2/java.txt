@@ -1,0 +1,15 @@
+package macro;
+
+class Macro1{
+int a = 5;
+double b;
+String c;
+
+public static void main(String[] args){
+	while (a!=0)
+		{
+			a--;
+		}
+}
+
+}

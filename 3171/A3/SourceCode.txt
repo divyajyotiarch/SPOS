@@ -1,0 +1,22 @@
+Macro XYZ
+Load a
+Add b
+MEND
+Macro PQR
+Load x
+Add y
+MEND
+Macro ABC
+Load p
+Add q
+MEND
+START
+Mult c
+Div d
+XYZ
+Add c
+XYZ
+ABC
+Store m
+PQR
+END
