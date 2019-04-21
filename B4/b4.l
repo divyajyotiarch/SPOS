@@ -1,4 +1,9 @@
-
+/*
+lex file.l
+yacc -d file.y
+cc lex.yy.c y.tab.h -ll OR cc lex.yy.c y.tab.c -ll -ly
+./a.out
+*/
 %{
 #include <stdio.h>
 #include <stdlib.h>

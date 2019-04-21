@@ -3,7 +3,7 @@
 #include<string.h>
 int words=0;
 int chars=0;
-int lines=0;
+int lines=0,space=0;
 %}
 
 character [A-Za-z]
@@ -14,6 +14,7 @@ word ({character}|{digit})+
 
 {word}	{words++; chars+=strlen(yytext);}
 \n	{lines++;}
+[" "]	{space++;}
 
 %%
 

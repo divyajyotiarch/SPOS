@@ -8,8 +8,6 @@
 
 %}
 
-character [A-Za-z]
-digit	[]
 
 %%
 for |
@@ -44,7 +42,7 @@ case  {printf("%s\tis a keyword\n",yytext);}
 
 [+-/=*%]   {ECHO; printf("\t is an Operator\t\n");}	
 
-([a-zA-Z][0-9])+|[a-zA-Z]*	{printf("%s\tis an identifier\n", yytext);}
+[_a-zA-Z][_a-zA-Z0-9]*	{printf("%s\tis an identifier\n", yytext);}
 %%
 
 main()

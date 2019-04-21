@@ -1,3 +1,19 @@
+/*
+Four system calls are provided for creating a
+     process, ending a process, and waiting for a process to complete.  These
+     system calls are fork(), the "exec" family, wait(), and exit().
+
+     System calls are functions used in the kernel itself.  To the
+     programmer, the system call appears as a normal C function call.
+     However since a system call executes code in the kernel, there must be a
+     mechanism to change the mode of a process from user mode to kernel mode.
+	
+	The library functions
+     typically invoke an instruction that changes the process execution mode
+     to kernel mode and causes the kernel to start executing code for system
+     calls.  The instruction that causes the mode change is often referred to
+     as an "operating system trap" which is a software generated interrupt.
+*/
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -30,7 +46,7 @@ void forkProcess(){
 void getExecutionParams(char** params){
 	
 	int i=0;
-	printf("Enter the path of executable file: \n");
+	printf("Enter the path of executable file: \n");	//filename is executable binary file
 	params[0] = (char*)malloc(100);
 	scanf("%s", params[0]);
 	for(i=1; i<3; i++){
@@ -58,7 +74,7 @@ void forkProcessAndExecute(){
 	}
 	if(process == 0){
 		printf("Starting requested process... \n");
-		execv(params[0], params);
+		execv(params[0], params);		//for execv, file name must be fully qualified path
 		printf("Process executed successfully!\n");
 	}	
 }

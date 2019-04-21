@@ -115,6 +115,7 @@ public class Bankers{
     			   work[j] = work[j]+allocated[i][j];
     		   }
     		   finish[i]=true;
+		System.out.println("P"+i+" <");
     	   }
     	   
         }

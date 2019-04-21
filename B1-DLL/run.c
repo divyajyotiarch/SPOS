@@ -23,7 +23,7 @@ int main(int argc,char* argv )
    switch(choice)
    {
       case 1:
-	  FunctionLib = dlopen("/home/manthan/DLL/Calculator/ADD.so",RTLD_LAZY);
+	  FunctionLib = dlopen("ADD.so",RTLD_LAZY);
 	  dlError = dlerror();
 	  printf("dlTest 3-Open Library with absolute path return-%s- \n", dlError);
 	  if( dlError ) exit(1);
@@ -42,7 +42,7 @@ int main(int argc,char* argv )
 	  if( rc ) exit(1);
 	  break;
       case 2:
-	  FunctionLib = dlopen("/home/manthan/DLL/Calculator/SUB.so",RTLD_LAZY);
+	  FunctionLib = dlopen("SUB.so",RTLD_LAZY);
 	  dlError = dlerror();
 	  printf("dlTest 3-Open Library with absolute path return-%s- \n", dlError);
 	  if( dlError ) exit(1);
@@ -61,7 +61,7 @@ int main(int argc,char* argv )
 	  if( rc ) exit(1);
 	  break;
       case 3:
-	  FunctionLib = dlopen("/home/manthan/DLL/Calculator/MUL.so",RTLD_LAZY);
+	  FunctionLib = dlopen("MUL.so",RTLD_LAZY);
 	  dlError = dlerror();
 	  printf("dlTest 3-Open Library with absolute path return-%s- \n", dlError);
 	  if( dlError ) exit(1);
@@ -80,7 +80,7 @@ int main(int argc,char* argv )
 	  if( rc ) exit(1);
 	  break;
       case 4:
-	  FunctionLib = dlopen("/home/manthan/DLL/Calculator/DIV.so",RTLD_LAZY);
+	  FunctionLib = dlopen("DIV.so",RTLD_LAZY);
 	  dlError = dlerror();
 	  printf("dlTest 3-Open Library with absolute path return-%s- \n", dlError);
 	  if( dlError ) exit(1);

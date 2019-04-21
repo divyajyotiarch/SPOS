@@ -1,6 +1,0 @@
-START
-Load m
-ABC
-XYZ 3 4
-PQR 3 4 5
-END
